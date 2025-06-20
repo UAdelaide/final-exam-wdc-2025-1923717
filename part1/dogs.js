@@ -1,3 +1,5 @@
+const { router } = require("./app");
+
 router.get('/api/dogs', async (req, res) => {
     try {}
   const [rows] = await db.query(`
@@ -17,3 +19,5 @@ app.get('/api/dogs', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch Dogs' });
   }
 });
+
+router.get('/api/')
