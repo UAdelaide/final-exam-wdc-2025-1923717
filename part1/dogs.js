@@ -1,5 +1,3 @@
-const { router } = require("./app");
-
 router.get('/api/dogs', async (req, res) => {
     try {}
   const [rows] = await db.query(`
@@ -18,14 +16,4 @@ app.get('/api/dogs', async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch Dogs' });
   }
-});
-
-router.get('/api/dogs', async (req, res) => {
-    try {
-    const [rows] = await db.query(`
-    SELECT bl.BookID, bi.Title, u.Name AS SellerName, bl.SellerID
-    FROM BookListings bl
-    JOIN BookInfo bi ON bl.BookInfoID = bi.BookInfoID
-    JOIN Users u ON bl.SellerID = u.UserID
-  `}
 });
