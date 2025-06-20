@@ -12,5 +12,5 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 var dogsRouter = require('/api/dogs');
-var usersRouter = require('/api/walkrequests/');
+var walkrequestssRouter = require('/api/walkrequests/open');
 var messagesRouter = require('./routes/messages');
