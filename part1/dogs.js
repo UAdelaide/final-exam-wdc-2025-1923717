@@ -11,7 +11,7 @@ router.get('/api/dogs', async (req, res) => {
 
 app.get('/api/dogs', async (req, res) => {
   try {
-    const [dogs] = await db.query('SELECT Dogs.name,   ');
+    const [dogs] = await db.query('SELECT Dogs.name, Dogs.size  ');
     res.json(books);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch Dogs' });
