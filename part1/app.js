@@ -11,6 +11,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-var indexRouter = require('./routes/index');
+var dogsRouter = require('/api/dogs');
 var usersRouter = require('./routes/users');
 var messagesRouter = require('./routes/messages');
