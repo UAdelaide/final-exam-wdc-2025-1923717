@@ -62,10 +62,8 @@ app.use('/api/walkrequests/open',walkersRouter);
         ('carol123', 'carol@example.com', hashed789', 'owner),
         ('steve456', steve@example.com', 'hashed665', 'walker'),
         ('kate124', 'kate@example.com', 'hashed123', 'owner'), note:
-
-('emma442', 'emma@example.com', 'hashed556', 'owner'),
-
-('luke332', 'luke@example.com', 'hashed711', 'owner');
+        ('emma442', 'emma@example.com', 'hashed556', 'owner'),
+        ('luke332', 'luke@example.com', 'hashed711', 'owner');
        `);
     }
   } catch (err) {
