@@ -53,7 +53,7 @@ app.use('/api/walkrequests/open',walkersRouter);
     `);
 
     // Insert data if table is empty
-    const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
+    const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (rows[0].count === 0) {
       await db.execute(`
         INSERT INTO Users (username, email, password_hash, role) VALUES
@@ -81,3 +81,5 @@ app.get('/', async (req, res) => {
   }
 });
 module.exports = app;
+
+
