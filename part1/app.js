@@ -60,33 +60,6 @@ app.use('/api/walkrequests/open',walkersRouter);
   }
 })();
 
-// Route to return Dogs as JSON
-app.get('/api/dogs', async (req, res) => {
-  try {
-    const [dogs] = await db.execute('SELECT * FROM Dogs WHERE ');
-    res.json(books);
-  } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch Dogs' });
-  }
-});
-
-app.get('/api/walkrequests/open', async (req, res) => {
-  try {
-    const [dogs] = await db.execute('SELECT * FROM Dogs WHERE ');
-    res.json(books);
-  } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch Dogs' });
-  }
-});
-
-app.get('/api/walkers/summary', async (req, res) => {
-  try {
-    const [dogs] = await db.execute('SELECT * FROM Dogs WHERE ');
-    res.json(books);
-  } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch Dogs' });
-  }
-});
 
 module.exports = app;
 
