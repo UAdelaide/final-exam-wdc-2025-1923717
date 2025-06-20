@@ -7,3 +7,4 @@ router.get('/api/dogs', async (req, res) => {
   `);
   res.json(rows);
 });
+
