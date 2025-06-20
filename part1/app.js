@@ -56,7 +56,7 @@ app.use('/api/walkrequests/open',walkersRouter);
     const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
     if (rows[0].count === 0) {
       await db.execute(`
-        INSERT INTO Users (title, author) VALUES
+        INSERT INTO Users () VALUES
        `);
     }
   } catch (err) {
