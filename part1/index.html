@@ -11,7 +11,7 @@
 
   <div class="gallery" v-if="dogImages.length">
   <h1>Dog of the day!</h1>
-  <img v-for="(url, index) in dogImages" :src="url" alt:="'Dog' + index">
+  <img v-for="(url, index) in dogImages" :src="url" alt:="'Dog' + index" :key="url">
   </div>
   <Script>
     const { createApp } = Vue;
@@ -22,7 +22,7 @@
         };
       },
     methods: (
-    async fetchDogs() {
+     async fetchDogs() {
       const res = await fetch('https://dog.ceo/api/breeds/image/random/3');
       const data = await res.json();
       this.dogImages = data.message;
