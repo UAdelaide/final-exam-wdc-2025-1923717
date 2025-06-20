@@ -1,4 +1,4 @@
-app.get('/api/walkrequests/open', async (req, res) => {
+router.get('/api/walkrequests/open', async (req, res) => {
   try {
     const [walkrequests] = await db.query(`SELECT Dogs.name, Dogs.size
     FROM Dogs
