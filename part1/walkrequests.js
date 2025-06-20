@@ -1,4 +1,4 @@
-router.get('/items', async (req, res) => {
+router.get('/walkrequests/open', async (req, res) => {
   const [rows] = await db.query(`
     SELECT bl.BookID, bi.Title, u.Name AS SellerName, bl.SellerID
     FROM BookListings bl
