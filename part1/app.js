@@ -13,4 +13,4 @@ app.use(cookieParser());
 
 var dogsRouter = require('/api/dogs');
 var walkrequestssRouter = require('/api/walkrequests/open');
-var messagesRouter = require('./routes/messages');
+var messagesRouter = require('/api/walkers/');
