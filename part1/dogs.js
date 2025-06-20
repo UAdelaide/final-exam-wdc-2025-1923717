@@ -1,4 +1,6 @@
-app.get('/api/dogs', async (req, res) => {
+const { router } = require("./app");
+
+router.get('/api/dogs', async (req, res) => {
   try {
     const [dogs] = await db.query(`SELECT Dogs.name, Dogs.size
     FROM Dogs
