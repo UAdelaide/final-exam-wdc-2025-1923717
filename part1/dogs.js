@@ -1,4 +1,5 @@
 router.get('/api/dogs', async (req, res) => {
+    try {}
   const [rows] = await db.query(`
     SELECT bl.BookID, bi.Title, u.Name AS SellerName, bl.SellerID
     FROM BookListings bl
