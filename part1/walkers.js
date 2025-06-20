@@ -1,9 +1,9 @@
 app.get('/api/walkers/summary', async (req, res) => {
   try {
-    const [dogs] = await db.query(`SELECT Dogs.name, Dogs.size
+    const [walkers] = await db.query(`SELECT Dogs.name, Dogs.size
     FROM Dogs
     Join Users ON owner.username = Dogs.Owner.username`);
-    res.json(books);
+    res.json(walkers);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch Dogs' });
   }
