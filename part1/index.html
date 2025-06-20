@@ -25,7 +25,7 @@
     async fetchDogs() {
       const res = await fetch('https://dog.ceo/api/breeds/image/random/3');
       const data = await res.json();
-      this.dogImages
+      this.dogImages = data.message;
     }
     )
     }).mount('app');
