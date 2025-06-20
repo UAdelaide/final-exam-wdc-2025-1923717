@@ -28,4 +28,4 @@ router.get('/api/dogs', async (req, res) => {
     JOIN BookInfo bi ON bl.BookInfoID = bi.BookInfoID
     JOIN Users u ON bl.SellerID = u.UserID
   `}
-}
+});
