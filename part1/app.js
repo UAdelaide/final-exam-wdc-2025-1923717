@@ -81,6 +81,23 @@ app.get('/api/dogs', async (req, res) => {
   }
 });
 
+app.get('/api/dogs', async (req, res) => {
+  try {
+    const [dogs] = await db.execute('SELECT * FROM Dogs WHERE ');
+    res.json(books);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch Dogs' });
+  }
+});
+
+app.get('/api/dogs', async (req, res) => {
+  try {
+    const [dogs] = await db.execute('SELECT * FROM Dogs WHERE ');
+    res.json(books);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch Dogs' });
+  }
+});
 
 module.exports = app;
 
