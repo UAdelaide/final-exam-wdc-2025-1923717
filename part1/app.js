@@ -43,8 +43,8 @@ app.use('/api/walkrequests/open',walkersRouter);
     // Create a table if it doesn't exist
     await db.execute(`
       CREATE TABLE IF NOT EXISTS Users (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        owner_id int,
+        user_id INT AUTO_INCREMENT PRIMARY KEY,
+        owner_id INT NOT NULL,
         author VARCHAR(255)
       )
     `);
