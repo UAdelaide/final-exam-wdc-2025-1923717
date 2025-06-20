@@ -21,7 +21,6 @@ app.use('/api/walkrequests/open',walkersRouter);
 
 (async () => {
   try {
-
     // Now connect to the created database
     db = await mysql.createConnection({
       host: 'localhost',
