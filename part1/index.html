@@ -11,7 +11,7 @@
 
   <div class="gallery" v-if="dogImages.length">
   <h1>Dog of the day!</h1>
-  <img v-for="">
+  <img v-for="(url, index) in dogImages">
   </div>
   <Script>
     const { createApp } = Vue;
