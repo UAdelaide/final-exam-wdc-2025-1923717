@@ -1,4 +1,4 @@
-app.get('/api/', async (req, res) => {
+app.get('/api/walkers/summary', async (req, res) => {
   try {
     const [dogs] = await db.query(`SELECT Dogs.name, Dogs.size
     FROM Dogs
