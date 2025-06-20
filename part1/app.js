@@ -77,7 +77,7 @@ app.get('/api/dogs', async (req, res) => {
     const [dogs] = await db.execute('SELECT * FROM Dogs');
     res.json(books);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch dogs' });
+    res.status(500).json({ error: 'Failed to fetch Dogs' });
   }
 });
 module.exports = app;
