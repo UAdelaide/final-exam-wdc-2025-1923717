@@ -59,17 +59,17 @@ app.use('/api/walkrequests/open',walkersRouter);
         INSERT INTO Users (username, email, password_hash, role) VALUES
         ('alice123', alice@example.com', 'hashed123', 'owner'), 
 
-('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
+('bobwalker', bob@example.com', 'hashed456', 'walker'),
 
 ('carol123', 'carol@example.com', hashed789', 'owner),
 
 ('steve456', steve@example.com', 'hashed665', 'walker'),
 
-('kate124', 'kate@example.com', 'hashed123', 'owner'), note: I added more because I don't know if duplicate owner id's matter and to add more owners
+('kate124', 'kate@example.com', 'hashed123', 'owner'), note:
 
-('emma442', 'emma@example.com', 'hashed556', 'owner'), 
+('emma442', 'emma@example.com', 'hashed556', 'owner'),
 
-('luke332', 'luke@example.com', 'hashed711', 'owner'); 
+('luke332', 'luke@example.com', 'hashed711', 'owner');
        `);
     }
   } catch (err) {
