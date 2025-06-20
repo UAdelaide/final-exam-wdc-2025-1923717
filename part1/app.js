@@ -15,7 +15,7 @@ var dogsRouter = require('/api/dogs');
 var walkrequestssRouter = require('/api/walkrequests/open');
 var walkersRouter = require('/api/walkers/summary');
 
-app.use
+app.use('/api/dogs')
 
 let db;
 
