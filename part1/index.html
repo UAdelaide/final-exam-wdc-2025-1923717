@@ -24,7 +24,8 @@
     methods: (
     async fetchDogs() {
       const res = await fetch('https://dog.ceo/api/breeds/image/random/3');
-      const data = 
+      const data = await res.json();
+      this.dogImages
     }
     )
     }).mount('app');
