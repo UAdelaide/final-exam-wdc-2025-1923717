@@ -65,7 +65,6 @@ app.use('/api/walkrequests/open',walkersRouter);
         ('emma442', 'emma@example.com', 'hashed556', 'owner'),
         ('luke332', 'luke@example.com', 'hashed711', 'owner');
        `);
-       
     }
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
