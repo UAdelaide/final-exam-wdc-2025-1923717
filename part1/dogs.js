@@ -20,4 +20,4 @@ app.get('/api/dogs', async (req, res) => {
   }
 });
 
-router.get('/api/')
+router.get('/api/dogs', async (req, res) => )
