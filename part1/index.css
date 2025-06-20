@@ -1,11 +1,13 @@
 body {
     font-size: smaller;
     background-color: white;
+    text-align: right;
 }
 
 h1 {
     font-weight: 100;
     font-size: small;
+    text-align: left;
 }
 
 .gallery {
