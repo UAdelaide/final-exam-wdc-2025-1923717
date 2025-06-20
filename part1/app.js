@@ -17,7 +17,7 @@ var walkersRouter = require('/api/walkers/summary');
 
 app.use('/api/dogs',dogsRouter);
 app.use('/api/walkrequests/open',walkrequestssRouter);
-app.use('')
+app.use('/api/walkrequests/open',walkersRouter);
 
 let db;
 
