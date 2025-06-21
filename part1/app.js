@@ -96,7 +96,7 @@ let db;
         ('bobwalker', bob@example.com', 'hashed456', 'walker'),
         ('carol123', 'carol@example.com', hashed789', 'owner),
         ('steve456', steve@example.com', 'hashed665', 'walker'),
-        ('kate124', 'kate@example.com', 'hashed123', 'owner'), note:
+        ('kate124', 'kate@example.com', 'hashed123', 'owner'),
         ('emma442', 'emma@example.com', 'hashed556', 'owner'),
         ('luke332', 'luke@example.com', 'hashed711', 'owner');
        `);
@@ -108,7 +108,8 @@ let db;
 
 app.get('/api/dogs', async (req, res) => {
   try {
-    const [rows] = await db.query(`SELECT Dogs.name, Dogs.size
+    const [rows] = await db.query(`SELECT Dogs.name,
+    Dogs.size
     FROM Dogs
     `);
     res.json(rows);
