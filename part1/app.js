@@ -76,8 +76,8 @@ app.get('/api/dogs', async (req, res) => {
 app.get('/api/walkers/summary', async (req, res) => {
   try {
     const [walkers] = await db.query(`SELECT WalkRequests.RequestId, WalkRequests.request_time
-    FROM Dogs
-    Join Users ON owner.username = Dogs.Owner.username`);
+    FROM WalkRequests
+    `);
     res.json(walkers);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch Dogs' });
