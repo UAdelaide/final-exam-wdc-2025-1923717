@@ -77,7 +77,7 @@ app.get('/api/walkers/summary', async (req, res) => {
   try {
     const [walkers] = await db.query(`SELECT WalkRequests.RequestId,
     WalkRequests.RequestTime,
-    
+    WalkRequests
     FROM WalkRequests
     `);
     res.json(walkers);
