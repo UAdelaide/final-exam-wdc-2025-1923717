@@ -28,12 +28,9 @@ document.getElementById('app').addEventListener('submit', function(event) {
 } catch (error) {
    console.error('Error during login:', error);
 }
-
-}
-
-}
 SendLoginCredentials(username, password);
-SendLoginCredentials(username, password););
+}
+})
 
 
 
