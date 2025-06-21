@@ -23,14 +23,7 @@
         };
       },
       async mounted() {
-        const dogsRes = await fetch('/api/dogs');
-        this.dogs = await itemsRes.json();
-
-        const walkrequestsRes = await fetch('/api/walkrequests/open');
-        this.messages = await messagesRes.json();
-      },
-      methods: {
-        async fetchDogs() {
+      async fetchDogs() {
       {
       const res = await fetch('https://dog.ceo/api/breeds/image/random/3');
       const data = await res.json();
