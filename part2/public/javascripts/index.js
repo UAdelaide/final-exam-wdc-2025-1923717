@@ -26,6 +26,6 @@ async function SendLoginCredentials(username, password) {
             redirect('/owner-dashboard.html');
         }
         else if (user.role === 'walker') {
-            redirect('/walker')
+            redirect('/walker-dashboard.html');
         }
     }}
