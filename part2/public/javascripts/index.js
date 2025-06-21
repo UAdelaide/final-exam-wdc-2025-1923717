@@ -1,1 +1,3 @@
-document.getElementById('app').addEventListener('submit', function)
+document.getElementById('app').addEventListener('submit', function(event) {
+    
+})
