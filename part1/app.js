@@ -19,6 +19,8 @@ app.use('/api/dogs',dogsRouter);
 app.use('/api/walkrequests/open',walkrequestssRouter);
 app.use('/api/walkrequests/open',walkersRouter);
 
+let db;
+
 (async () => {
   try {
     // Now connect to the created database
