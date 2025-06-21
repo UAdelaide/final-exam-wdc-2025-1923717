@@ -5,7 +5,8 @@ document.getElementById('app').addEventListener('submit', function(event) {
     const password= document.getElementById('psw').value;
 
     if (username.trim() === '' || password.trim() === '') {
-        alert('Please enter a Username')
+        alert('Please enter a Username and Password');
+        return;
     }
 
 })
