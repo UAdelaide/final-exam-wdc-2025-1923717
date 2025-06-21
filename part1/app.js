@@ -118,7 +118,7 @@ app.get('/api/dogs', async (req, res) => {
   }
 });
 
-app.get('/api/walkrequests/summary', async (req, res) => {
+app.get('/api/walkrequests/open', async (req, res) => {
   try {
     const [rows] = await db.query(`SELECT
     WalkRequests.request_id,
@@ -133,6 +133,20 @@ app.get('/api/walkrequests/summary', async (req, res) => {
   }
 });
 
+app.get('/api/walkrequests/open', async (req, res) => {
+  try {
+    const [rows] = await db.query(`SELECT
+    WalkRequests.request_id,
+    WalkRequests.request_time,
+    WalkRequests.duration_minutes,
+    WalkRequests.location
+    FROM WalkRequests
+    `);
+    res.json(rows);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch WalkRequests' });
+  }
+});
 
 
 module.exports = app;
