@@ -32,6 +32,7 @@ async function SendLoginCredentials(username, password) {
         }
 } catch (error) {
    console.error('Error during login:', error);
-   
-}}
+}
+SendLoginCredentials(username, password);
+}
 
