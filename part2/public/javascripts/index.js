@@ -9,8 +9,7 @@ document.getElementById('app').addEventListener('submit', function(event) {
         return;
     }
 
-    async function SendLoginCredentials() {  //post username and password
-    // if owner redirected to owner dashboard //if walker redirected to walker dashboard
+    async function SendLoginCredentials() {
     try {
   const response = await fetch('/', {
             method: 'POST',
