@@ -73,7 +73,7 @@ app.get('/api/dogs', async (req, res) => {
 
 app.get('/api/walkers/summary', async (req, res) => {
   try {
-    const [walkers] = await db.query(`SELECT D.name, Dogs.size
+    const [walkers] = await db.query(`SELECT WalkRequests.request, Dogs.size
     FROM Dogs
     Join Users ON owner.username = Dogs.Owner.username`);
     res.json(walkers);
