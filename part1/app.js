@@ -75,9 +75,9 @@ app.get('/api/dogs', async (req, res) => {
 
 app.get('/api/walkers/summary', async (req, res) => {
   try {
-    const [rows] = await db.query(`SELECT WalkRequests.requestid,
-    WalkRequests.requesttime,
-    WalkRequests.durationMinutes
+    const [rows] = await db.query(`SELECT WalkRequests.request_id,
+    WalkRequests.request_time,
+    WalkRequests.duration_minutes
     WalkRequests
     FROM WalkRequests
     `);
