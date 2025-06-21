@@ -21,5 +21,4 @@ async function SendLoginCredentials(username, password) {
             },
             body: JSON.stringify({ username, password})
         })
-    }
-}
+    }};
