@@ -9,7 +9,7 @@ document.getElementById('app').addEventListener('submit', function(event) {
         return;
     }
 
-    async function SendLoginCredentials() {  //post user 
+    async function SendLoginCredentials() {  //post username and password if owner redirected to owner dashboard 
     try {
   const response = await fetch('/', {
             method: 'POST',
