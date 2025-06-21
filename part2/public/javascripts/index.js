@@ -4,6 +4,8 @@ document.getElementById('app').addEventListener('submit', function(event) {
     const username= document.getElementById('uname').value;
     const password= document.getElementById('psw').value;
 
-    if (username.trim() === '' || password.trim() === '')
+    if (username.trim() === '' || password.trim() === '') {
+        alert('Please enter a Username')
+    }
 
 })
