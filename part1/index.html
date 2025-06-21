@@ -47,16 +47,10 @@
       },
       methods: {
         async sendMessage() {
-          if (!this.selectedItem.BookID || !this.messageText.trim()) {
-            return alert('Please select a book and enter a message.');
-          }
-          await fetch('/api/messages', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ bookID: this.selectedItem.BookID, sellerID: this.selectedItem.SellerID, message: this.messageText })
-          });
-          alert('Message sent!');
-          this.messageText = '';
+          async fetchDogs() {
+      const res = await fetch('https://dog.ceo/api/breeds/image/random/3');
+      const data = await res.json();
+      this.dogImages = data.message;
         }
       }
     }).mount('#app');
