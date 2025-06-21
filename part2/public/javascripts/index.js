@@ -23,6 +23,7 @@ async function SendLoginCredentials(username, password) {
         });
         const data = await response.json();
         if (user.role === 'owner') {
-            redirect('/owner-dashboard.html')
+            redirect('/owner-dashboard.html');
         }
+        else if 
     }}
