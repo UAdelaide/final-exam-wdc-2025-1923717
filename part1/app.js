@@ -41,6 +41,8 @@ let db;
     role ENUM('owner', 'walker') NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       )
+
+      
     `);
 
     // Insert data if table is empty
