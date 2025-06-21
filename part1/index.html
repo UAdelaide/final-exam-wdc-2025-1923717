@@ -42,7 +42,7 @@
         const dogsRes = await fetch('/api/dogs');
         this.dogs = await itemsRes.json();
 
-        const messagesRes = await fetch('/api/');
+        const messagesRes = await fetch('/api/walkrequests/open');
         this.messages = await messagesRes.json();
       },
       methods: {
