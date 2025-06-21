@@ -31,7 +31,6 @@ document.getElementById('app').addEventListener('submit', function(event) {
 SendLoginCredentials(username, password);
 }
 
-    SendLoginCredentials(username, password);
 
 });
 
