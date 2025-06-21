@@ -12,4 +12,8 @@ document.getElementById('app').addEventListener('submit', function(event) {
 
 });
 
-async function SendLoginCredentials
+async function SendLoginCredentials(username, password) {
+    try{
+        
+    }
+}
