@@ -64,10 +64,10 @@ let db;
 
 app.get('/api/dogs', async (req, res) => {
   try {
-    const [dogs] = await db.query(`SELECT Dogs.name, Dogs.size
+    const [rows] = await db.query(`SELECT Dogs.name, Dogs.size
     FROM Dogs
     `);
-    res.json(dogs);
+    res.json(rows);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch Dogs' });
   }
