@@ -8,5 +8,5 @@ document.getElementById('app').addEventListener('submit', function(event) {
         alert('Please enter a Username and Password');
         return;
     }
-
+    Send
 })
