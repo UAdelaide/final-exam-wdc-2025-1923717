@@ -84,7 +84,7 @@ app.get('/api/walkers/summary', async (req, res) => {
     `);
     res.json(rows);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch Walk' });
+    res.status(500).json({ error: 'Failed to fetch WalkRequests' });
   }
 });
 
