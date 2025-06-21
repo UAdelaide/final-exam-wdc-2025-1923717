@@ -16,7 +16,9 @@ async function SendLoginCredentials(username, password) {
     try{
         const response = await fetch('/', {
             method: 'POST',
-            
+            headers: {
+                'Content-Type'
+            }
         })
     }
 }
