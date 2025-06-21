@@ -125,7 +125,6 @@ app.get('/api/walkrequests/open', async (req, res) => {
     WalkRequests.request_time,
     WalkRequests.duration_minutes,
     WalkRequests.location,
-    WalkRequests.status'open'
     FROM WalkRequests
     `);
     res.json(rows);
