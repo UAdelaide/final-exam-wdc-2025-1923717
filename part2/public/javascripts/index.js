@@ -29,6 +29,6 @@ async function SendLoginCredentials(username, password) {
             redirect('/walker-dashboard.html');
         }
     catch (error) {
-            console.error('')
+            console.error('Error during login:', error)
         }
     }};
