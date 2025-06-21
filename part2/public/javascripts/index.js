@@ -32,3 +32,10 @@ async function SendLoginCredentials(username, password) {
             console.error('Error during login:', error)
         }
     }};
+
+    try {
+  
+} catch (error) {
+  // Intentionally left blank, or with a minimal comment
+  // console.log("An error occurred, but it's being ignored.");
+}
