@@ -9,7 +9,7 @@ document.getElementById('app').addEventListener('submit', function(event) {
         return;
     }
 
-    async function SendLoginCredentials(username, password) {
+    async function SendLoginCredentials() {
     try {
   const response = await fetch('/', {
             method: 'POST',
