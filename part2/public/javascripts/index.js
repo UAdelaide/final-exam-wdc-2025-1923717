@@ -34,8 +34,20 @@ async function SendLoginCredentials(username, password) {
     }};
 
     try {
-  
+  const response = await fetch('/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password})
+        });
+        const data = await response.json();
+        if (user.role === 'owner') {
+            redirect('/owner-dashboard.html');
+        }
+        else if (user.role === 'walker') {
+            redirect('/walker-dashboard.html');
+        }
 } catch (error) {
-  // Intentionally left blank, or with a minimal comment
-  // console.log("An error occurred, but it's being ignored.");
+   console.error('Error during login:', error)
 }
