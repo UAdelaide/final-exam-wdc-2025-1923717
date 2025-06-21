@@ -14,6 +14,8 @@ document.getElementById('app').addEventListener('submit', function(event) {
 
 async function SendLoginCredentials(username, password) {
     try{
-        const response = await
+        const response = await fetch('/', {
+            
+        })
     }
 }
