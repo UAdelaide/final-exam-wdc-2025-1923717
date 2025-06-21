@@ -14,7 +14,7 @@ document.getElementById('app').addEventListener('submit', function(event) {
 
 
 
-    async function SendLoginCredentials(username, password) {
+async function SendLoginCredentials(username, password) {
     try {
   const response = await fetch('/', {
             method: 'POST',
@@ -31,6 +31,5 @@ document.getElementById('app').addEventListener('submit', function(event) {
             redirect('/walker-dashboard.html');
         }
 } catch (error) {
-   console.error('Error during login:', error)
-}
-    }
+   console.error('Error during login:', error);
+}}
