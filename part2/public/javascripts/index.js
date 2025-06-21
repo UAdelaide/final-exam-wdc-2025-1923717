@@ -1,4 +1,5 @@
 function Login()
 {
-    var username = document.getElementById('uname')
+    var username = document.getElementById('uname').value;
+    
 }
