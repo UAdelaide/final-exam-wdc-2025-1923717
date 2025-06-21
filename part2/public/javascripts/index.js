@@ -18,7 +18,8 @@ async function SendLoginCredentials(username, password) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
-            }
+            },
+            body: JSON
         })
     }
 }
