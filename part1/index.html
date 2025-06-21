@@ -39,10 +39,10 @@
         };
       },
       async mounted() {
-        const itemsRes = await fetch('/api/dogs');
-        this.items = await itemsRes.json();
+        const dogsRes = await fetch('/api/dogs');
+        this.dogs = await itemsRes.json();
 
-        const messagesRes = await fetch('/api/messages');
+        const messagesRes = await fetch('/api/');
         this.messages = await messagesRes.json();
       },
       methods: {
