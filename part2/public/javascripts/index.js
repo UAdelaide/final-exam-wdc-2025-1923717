@@ -19,7 +19,7 @@ async function SendLoginCredentials(username, password) {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON
+            body: JSON.stringify({ username, password})
         })
     }
 }
