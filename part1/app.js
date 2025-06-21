@@ -60,6 +60,18 @@ app.use('/api/walkrequests/open',walkersRouter);
   }
 })();
 
+app.get('/api/dogs', async (req, res) => {
+  try {
+    const [dogs] = await db.query(`SELECT Dogs.name, Dogs.size
+    FROM Dogs
+    Join Users ON owner.username = Dogs.Owner.username`);
+    res.json(dogs);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch Dogs' });
+  }
+});
+
+
 
 module.exports = app;
 
