@@ -13,10 +13,10 @@
   <h1>Dog of the day!</h1>
   <img v-for="(url, index) in dogImages" :src="url" alt:="'Dog' + index" :key="url">
   </div>
-  
+
   <script>
    const { createApp } = Vue;
-    createApp({
+    createApp(
       data() {
         return {
           dogImages:[]
