@@ -136,11 +136,11 @@ app.get('/api/walkrequests/open', async (req, res) => {
 app.get('/api/walkers/summary', async (req, res) => {
   try {
     const [rows] = await db.query(`SELECT
-    
+
     `);
     res.json(rows);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch WalkRequests' });
+    res.status(500).json({ error: 'Failed to fetch Walkers summary' });
   }
 });
 
