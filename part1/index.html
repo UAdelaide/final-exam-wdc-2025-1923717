@@ -29,5 +29,41 @@
     }
   );
   </Script>
+
+  <script>
+  const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          currentUserName: 'Alice Johnson',
+          items: [],
+          selectedItem: null,
+          messageText: '',
+          messages: []
+        };
+      },
+      async mounted() {
+        const itemsRes = await fetch('/api/items');
+        this.items = await itemsRes.json();
+
+        const messagesRes = await fetch('/api/messages');
+        this.messages = await messagesRes.json();
+      },
+      methods: {
+        async sendMessage() {
+          if (!this.selectedItem.BookID || !this.messageText.trim()) {
+            return alert('Please select a book and enter a message.');
+          }
+          await fetch('/api/messages', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ bookID: this.selectedItem.BookID, sellerID: this.selectedItem.SellerID, message: this.messageText })
+          });
+          alert('Message sent!');
+          this.messageText = '';
+        }
+      }
+    }).mount('#app');
+  </script>
 </body>
 </html>
