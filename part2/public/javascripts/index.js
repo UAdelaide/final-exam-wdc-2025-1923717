@@ -20,10 +20,10 @@ document.getElementById('app').addEventListener('submit', function(event) {
         });
         const data = await response.json();
         if (user.role === 'owner') {
-            redirect('/owner-dashboard.html');
+            redirect('/owner-dashboard.html'); //if owner redirect to owner dashboard
         }
         else if (user.role === 'walker') {
-            redirect('/walker-dashboard.html');
+            redirect('/walker-dashboard.html'); //if walker redirect to walker dashboard
         }
 } catch (error) {
    console.error('Error during login:', error);
